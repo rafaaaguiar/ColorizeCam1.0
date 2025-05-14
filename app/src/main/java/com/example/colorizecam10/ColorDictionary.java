@@ -7,31 +7,6 @@ public class ColorDictionary {
     private static final Map<String, int[]> colorMap = new HashMap<>();
 
     static {
-        /**colorMap.put("Vermelho", new int[][]{{200, 255}, {0, 50}, {0, 50}});
-        colorMap.put("Vermelho", new int[]{255, 0, 0});
-        colorMap.put("Azul", new int[]{0, 0, 255});
-        colorMap.put("Verde", new int[]{0, 255, 0});
-        colorMap.put("Amarelo", new int[]{255, 255, 0});
-        //colorMap.put("Ciano", new int[]{0, 255, 255});
-        //colorMap.put("Magenta", new int[]{255, 0, 255});
-        colorMap.put("Preto", new int[]{0, 0, 0});
-        colorMap.put("Branco", new int[]{255, 255, 255});
-        //colorMap.put("Cinza", new int[]{128, 128, 128});
-        colorMap.put("Laranja", new int[]{246, 120, 40});
-        colorMap.put("Roxo", new int[]{128, 0, 128});
-        colorMap.put("Marrom", new int[]{150, 75, 0});
-        //colorMap.put("Rosa", new int[]{255, 192, 203});
-        //colorMap.put("Turquesa", new int[]{64, 224, 208});
-        //colorMap.put("Oliva", new int[]{128, 128, 0});
-        //colorMap.put("Bege", new int[]{255, 228, 196});
-        //colorMap.put("Violeta", new int[]{238, 130, 238});
-        //colorMap.put("Ametista", new int[]{255, 222, 173});
-        //colorMap.put("Prata", new int[]{192, 192, 192});
-        //colorMap.put("Fúcsia", new int[]{255, 0, 255});
-        //colorMap.put("Índigo", new int[]{75, 0, 130});
-        //colorMap.put("Ameixa", new int[]{178, 34, 34});
-        //colorMap.put("Camomila", new int[]{255, 192, 203});**/
-
         colorMap.put("Açafrão", new int[]{244, 196, 48});
         colorMap.put("Água", new int[]{0, 255, 255});
         colorMap.put("Água-marinha", new int[]{127, 255, 212});
@@ -288,6 +263,124 @@ public class ColorDictionary {
         colorMap.put("Violeta claro", new int[]{248, 203, 248});
         colorMap.put("Xanadu", new int[]{115, 134, 120});
         colorMap.put("Zaffre", new int[]{0, 8, 66});
+    }
+
+    public static final Map<String, String> colorCategoryMap = new HashMap<>();
+    static {
+// Categoria: Amarelo
+// Categoria: Amarelo
+        colorCategoryMap.put("Açafrão", "Amarelo");
+        colorCategoryMap.put("Amarelo", "Amarelo");
+        colorCategoryMap.put("Amarelo Brasilis", "Amarelo");
+        colorCategoryMap.put("Amarelo Canário", "Amarelo");
+        colorCategoryMap.put("Amarelo Claro", "Amarelo");
+        colorCategoryMap.put("Amarelo Creme", "Amarelo");
+        colorCategoryMap.put("Amarelo Escuro", "Amarelo");
+        colorCategoryMap.put("Amarelo Esverdeado", "Amarelo");
+        colorCategoryMap.put("Amarelo Ouro Claro", "Amarelo");
+        colorCategoryMap.put("Amarelo Queimado", "Amarelo");
+        colorCategoryMap.put("Âmbar", "Amarelo");
+        colorCategoryMap.put("Dourado", "Amarelo");
+        colorCategoryMap.put("Dourado Escuro", "Amarelo");
+        colorCategoryMap.put("Mostarda", "Amarelo");
+
+// Categoria: Azul
+        colorCategoryMap.put("Azure", "Azul");
+        colorCategoryMap.put("Azul", "Azul");
+        colorCategoryMap.put("Azul Claro", "Azul");
+        colorCategoryMap.put("Azul Marinho", "Azul");
+        colorCategoryMap.put("Azul Real", "Azul");
+        colorCategoryMap.put("Azul Cobalto", "Azul");
+        colorCategoryMap.put("Azul Celeste", "Azul");
+        colorCategoryMap.put("Azul Força Aérea", "Azul");
+
+// Categoria: Branco
+        colorCategoryMap.put("Branco", "Branco");
+        colorCategoryMap.put("Branco Antigo", "Branco");
+        colorCategoryMap.put("Branco Fantasma", "Branco");
+        colorCategoryMap.put("Branco Floral", "Branco");
+        colorCategoryMap.put("Branco Fumaça", "Branco");
+        colorCategoryMap.put("Concha", "Branco");
+        colorCategoryMap.put("Neve", "Branco");
+
+// Categoria: Cinza
+        colorCategoryMap.put("Cinza", "Cinza");
+        colorCategoryMap.put("Cinza Ardósia", "Cinza");
+        colorCategoryMap.put("Cinza Claro", "Cinza");
+        colorCategoryMap.put("Cinza Escuro", "Cinza");
+        colorCategoryMap.put("Cinza Fosco", "Cinza");
+        colorCategoryMap.put("Cinza Médio", "Cinza");
+        colorCategoryMap.put("Gris", "Cinza");
+        colorCategoryMap.put("Gainsboro", "Cinza");
+
+// Categoria: Marrom
+        colorCategoryMap.put("Marrom", "Marrom");
+        colorCategoryMap.put("Marrom Amarelado", "Marrom");
+        colorCategoryMap.put("Marrom Claro", "Marrom");
+        colorCategoryMap.put("Marrom Rosado", "Marrom");
+        colorCategoryMap.put("Castanho Avermelhado", "Marrom");
+        colorCategoryMap.put("Sépia", "Marrom");
+
+// Categoria: Preto
+        colorCategoryMap.put("Preto", "Preto");
+        colorCategoryMap.put("Ébano", "Preto");
+        colorCategoryMap.put("Fuligem", "Preto");
+
+// Categoria: Laranja
+        colorCategoryMap.put("Laranja", "Laranja");
+        colorCategoryMap.put("Laranja Escuro", "Laranja");
+        colorCategoryMap.put("Laranja Claro", "Laranja");
+        colorCategoryMap.put("Cenoura", "Laranja");
+        colorCategoryMap.put("Tangerina", "Laranja");
+
+// Categoria: Roxo
+        colorCategoryMap.put("Roxo", "Roxo");
+        colorCategoryMap.put("Roxo Brasilis", "Roxo");
+        colorCategoryMap.put("Ametista", "Roxo");
+        colorCategoryMap.put("Violeta", "Roxo");
+        colorCategoryMap.put("Violeta Escuro", "Roxo");
+        colorCategoryMap.put("Violeta Claro", "Roxo");
+
+// Categoria: Azul Céu Profundo
+        colorCategoryMap.put("Azul Céu Profundo", "Azul Céu Profundo");
+        colorCategoryMap.put("Azul Celeste", "Azul Céu Profundo");
+        colorCategoryMap.put("Azul Céu Claro", "Azul Céu Profundo");
+
+// Categoria: Bordô
+        colorCategoryMap.put("Bordô", "Bordô");
+        colorCategoryMap.put("Borgonha", "Bordô");
+        colorCategoryMap.put("Grená", "Bordô");
+
+// Categoria: Dourado Pálido
+        colorCategoryMap.put("Dourado Pálido", "Dourado Pálido");
+        colorCategoryMap.put("Dourado", "Dourado Pálido");
+        colorCategoryMap.put("Dourado Escuro", "Dourado Pálido");
+
+// Categoria: Vermelho
+        colorCategoryMap.put("Vermelho", "Vermelho");
+        colorCategoryMap.put("Vermelho Escuro", "Vermelho");
+        colorCategoryMap.put("Vermelho Indiano", "Vermelho");
+        colorCategoryMap.put("Rubro", "Vermelho");
+        colorCategoryMap.put("Escarlate", "Vermelho");
+
+// Categoria: Rosa
+        colorCategoryMap.put("Rosa", "Rosa");
+        colorCategoryMap.put("Rosa Bebê", "Rosa");
+        colorCategoryMap.put("Rosa Claro", "Rosa");
+        colorCategoryMap.put("Rosa Choque", "Rosa");
+        colorCategoryMap.put("Rosa Quartzo", "Rosa");
+
+// Categoria: Verde
+        colorCategoryMap.put("Verde", "Verde");
+        colorCategoryMap.put("Verde Lima", "Verde");
+        colorCategoryMap.put("Verde Fluorescente", "Verde");
+        colorCategoryMap.put("Verde Menta", "Verde");
+
+// Categoria: Verde Escuro
+        colorCategoryMap.put("Verde Escuro", "Verde Escuro");
+        colorCategoryMap.put("Verde Floresta", "Verde Escuro");
+        colorCategoryMap.put("Verde Militar", "Verde Escuro");
+        colorCategoryMap.put("Oliva Escura", "Verde Escuro");
 
     }
 
@@ -307,6 +400,6 @@ public class ColorDictionary {
                 closestColor = entry.getKey();
             }
         }
-        return closestColor;
+        return colorCategoryMap.getOrDefault(closestColor, closestColor);
         }
     }
