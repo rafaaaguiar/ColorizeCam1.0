@@ -1,12 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-    <item android:id="@+id/nav_home" android:title="Testes de Daltonismo"/>
+    <item android:id="@+id/nav_home" android:title="Camera"/>
     <item android:id="@+id/nav_settings" android:title="Clinicas"/>
-    <item
-        android:id="@+id/nav_drawer"
-        android:title="Menu"
-        android:icon="@drawable/ic_menu"
-        app:showAsAction="always"/>
+
 
 </menu>
