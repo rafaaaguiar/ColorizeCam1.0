@@ -140,10 +140,10 @@ public class MainActivity extends AppCompatActivity {
         return bitmap.getPixel(x, y);
     }
 
-    private void updateColorNameText(String colorName) {
+    private void updateColorNameText(String colorCategory) {
         runOnUiThread(() -> {
             TextView colorNameText = findViewById(R.id.colorNameText);
-            colorNameText.setText(colorName);
+            colorNameText.setText(colorCategory);
         });
     }
 
