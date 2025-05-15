@@ -72,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
             public boolean onNavigationItemSelected(MenuItem item) {
                 int id = item.getItemId();
                 if (id == R.id.nav_home) {
-                    Toast.makeText(MainActivity.this, "Testes de Daltonismo", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "", Toast.LENGTH_SHORT).show();
                 } else if (id == R.id.nav_settings) {
                     Intent intent = new Intent(MainActivity.this, ClinicasActivity.class);
                     startActivity(intent);
