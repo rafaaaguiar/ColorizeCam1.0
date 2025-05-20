@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.colorize10.R;
 import com.example.colorizecam10.MainActivity;
+import com.example.colorizecam10.TestesDalt.TestesActivity;
 import com.google.android.material.navigation.NavigationView;
 
 import java.util.ArrayList;
@@ -38,14 +39,21 @@ public class ClinicasActivity extends AppCompatActivity {
 
         navigationView.setNavigationItemSelectedListener(item -> {
             int id = item.getItemId();
-            if (id == R.id.nav_home) {
-                startActivity(new Intent(ClinicasActivity.this, MainActivity.class));
-            }else if (id == R.id.nav_settings) {
-                Toast.makeText(ClinicasActivity.this, "Já está na página de Clinicas", Toast.LENGTH_SHORT).show();
+
+            if (id == R.id.nav_clinicas) {
+                Toast.makeText(ClinicasActivity.this,"", Toast.LENGTH_SHORT).show();
+            } else if (id == R.id.nav_home) {
+                Intent intent = new Intent(ClinicasActivity.this, MainActivity.class);
+                startActivity(intent);
+            } else if (id == R.id.nav_testes) {
+                Intent intent = new Intent(ClinicasActivity.this, TestesActivity.class);
+                startActivity(intent);
             }
-            drawerLayout.closeDrawers();
+
+            drawerLayout.closeDrawers(); // Fechar o menu corretamente após qualquer clique
             return true;
-                });
+        });
+
 
         RecyclerView recyclerView = findViewById(R.id.clinicaRecyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
