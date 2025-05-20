@@ -29,14 +29,19 @@
             android:name="com.example.colorizecam10.MainActivity"
             android:exported="true"
             android:label="@string/app_name"
-            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
+            android:theme="@style/Theme.TransparentSystemBars">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.colorizecam10.Clinicas.ClinicasActivity"/>
+        <activity android:name="com.example.colorizecam10.Clinicas.ClinicasActivity"
+            android:label="Clinicas"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"/>
+       <activity android:name="com.example.colorizecam10.TestesDalt.TestesActivity"
+           android:label="Testes"
+           android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"/>
 
 
     </application>
