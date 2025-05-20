@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/bg_blue"
+            android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+            app:title="Testes"
+            app:titleTextColor="@color/white"/>
+
+        <!-- cardview com imagem -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="250dp"
+            android:layout_height="350dp"
+            android:layout_marginTop="32dp"
+            app:cardElevation="6dp"
+            app:cardCornerRadius="12dp"
+            app:layout_constraintTop_toBottomOf="@id/toolbar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+
+            <ImageView
+                android:id="@+id/cardImage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="30dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/img_test1" />
+
+            <TextView
+            android:id="@+id/answerText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="16dp"
+            android:textSize="18sp"
+            android:visibility="gone" />
+        </androidx.cardview.widget.CardView>
+        <!-- campo resposta -->
+        <EditText
+            android:id="@+id/userResponse"
+            android:layout_width="298dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="72dp"
+            android:background="@drawable/borda_input"
+            android:hint="Digite sua resposta..."
+            android:imeOptions="actionDone"
+            android:inputType="number"
+            android:maxLines="1"
+            android:padding="12dp"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.495"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cardView" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Navigation Drawer -->
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:menu="@menu/menu_nav"
+        style="@style/NavigationMenuStyle"/>
+
+</androidx.drawerlayout.widget.DrawerLayout>
+
