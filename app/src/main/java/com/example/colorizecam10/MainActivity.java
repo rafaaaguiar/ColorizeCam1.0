@@ -4,11 +4,14 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.graphics.Color;
 import android.graphics.Rect;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.MenuItem;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -26,6 +29,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.example.colorize10.R;
 import com.example.colorizecam10.Clinicas.ClinicasActivity;
+import com.example.colorizecam10.TestesDalt.TestesActivity;
 import com.google.android.material.navigation.NavigationView;
 import com.google.common.util.concurrent.ListenableFuture;
 
@@ -40,8 +44,15 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        getWindow().setFlags(
+                WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,
+                WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS
+        );
+
 
         // Inicializando DrawerLayout
         DrawerLayout drawerLayout = findViewById(R.id.drawer_layout);
@@ -67,27 +78,27 @@ public class MainActivity extends AppCompatActivity {
 
 
         // Configurando o menu de navegação
-        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(MenuItem item) {
-                int id = item.getItemId();
-                if (id == R.id.nav_home) {
-                    Toast.makeText(MainActivity.this, "", Toast.LENGTH_SHORT).show();
-                } else if (id == R.id.nav_settings) {
-                    Intent intent = new Intent(MainActivity.this, ClinicasActivity.class);
-                    startActivity(intent);
-                }
-                drawerLayout.closeDrawers();
-                return true;
-            }
-        });
+
+                navigationView.setNavigationItemSelectedListener(item -> {
+                    int id = item.getItemId();
+
+                    if (id == R.id.nav_home) {
+                        Toast.makeText(MainActivity.this, "Página Inicial", Toast.LENGTH_SHORT).show();
+                    } else if (id == R.id.nav_clinicas) {
+                        Intent intent = new Intent(MainActivity.this, ClinicasActivity.class);
+                        startActivity(intent);
+                    } else if (id == R.id.nav_testes) {
+                        Intent intent = new Intent(MainActivity.this, TestesActivity.class);
+                        startActivity(intent);
+                    }
+
+                    drawerLayout.closeDrawers(); // Fechar o menu corretamente após qualquer clique
+                    return true;
+                });
 
 
 
-
-
-
-        // Inicialização de componentes
+                // Inicialização de componentes
         previewView = findViewById(R.id.previewView);
         cameraExecutor = Executors.newSingleThreadExecutor();
         cameraProviderFuture = ProcessCameraProvider.getInstance(this);
