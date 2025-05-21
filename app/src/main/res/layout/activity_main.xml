@@ -9,15 +9,22 @@
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:background="?attr/colorPrimary"
+        android:layout_height="100sp"
+        android:background="@color/bg_blue"
+        android:paddingTop="20sp"
+        android:paddingBottom="20sp"
+        android:paddingStart="16dp"
+        android:contentInsetStart="16dp"
+        app:contentInsetLeft="16dp"
+        app:contentInsetStartWithNavigation="16dp"
         />
 
     <!-- DrawerLayout para o menu lateral -->
     <androidx.drawerlayout.widget.DrawerLayout
         android:id="@+id/drawer_layout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_marginTop="70sp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -36,9 +43,9 @@
                 android:layout_height="wrap_content"
                 android:text="Detectar Cor"
                 android:textColor="@color/white"
-                android:background="@color/bg_blue"
-
-
+                android:background="@drawable/borda_btn"
+                app:backgroundTint="@color/bg_blue"
+                style="@style/Widget.AppCompat.Button"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -85,6 +92,7 @@
             android:layout_gravity="start"
             app:menu="@menu/menu_nav"
             android:paddingTop="0dp"
+            android:background="@drawable/gradient_background"
 
             style="@style/NavigationMenuStyle"/>
 

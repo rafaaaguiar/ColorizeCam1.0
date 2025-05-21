@@ -5,9 +5,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@drawable/gradient_background">
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
@@ -16,7 +18,8 @@
             android:background="@color/bg_blue"
             android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
             app:title="Testes"
-            app:titleTextColor="@color/white"/>
+            app:titleTextColor="@color/white"
+            app:titleTextAppearance="@style/TextAppearance.Centralizado"/>
 
         <!-- cardview com imagem -->
         <androidx.cardview.widget.CardView
@@ -24,6 +27,8 @@
             android:layout_width="250dp"
             android:layout_height="350dp"
             android:layout_marginTop="32dp"
+            android:background="@color/white"
+            app:cardBackgroundColor="@color/white"
             app:cardElevation="6dp"
             app:cardCornerRadius="12dp"
             app:layout_constraintTop_toBottomOf="@id/toolbar"
@@ -35,8 +40,7 @@
                 android:id="@+id/cardImage"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginTop="30dp"
-                android:scaleType="centerCrop"
+
                 android:src="@drawable/img_test1" />
 
             <TextView
@@ -46,7 +50,8 @@
             android:gravity="center"
             android:padding="16dp"
             android:textSize="18sp"
-            android:visibility="gone" />
+            android:visibility="gone"
+            android:textColor="@color/black"/>
         </androidx.cardview.widget.CardView>
         <!-- campo resposta -->
         <EditText
@@ -74,7 +79,7 @@
             android:text="Próximo"
             android:textColor="@color/white"
             android:layout_marginTop="16dp"
-            android:background="@color/bg_blue"
+            android:background="@drawable/borda_btn"
             app:layout_constraintTop_toBottomOf="@+id/userResponse"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"/>
@@ -87,6 +92,7 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="start"
+        android:background="@drawable/gradient_background"
         app:menu="@menu/menu_nav"
         style="@style/NavigationMenuStyle"/>
 

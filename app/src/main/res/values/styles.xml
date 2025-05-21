@@ -1,7 +1,7 @@
 <resources>
-    <!-- Tema para o aplicativo -->
+
     <style name="Theme.ColorizeCam10" parent="Theme.AppCompat.DayNight.NoActionBar">
-        <!-- Personalizações podem ser adicionadas aqui -->
+
         <item name="colorPrimary">@color/purple_500</item>
         <item name="colorPrimaryDark">@color/purple_700</item>
         <item name="colorAccent">@color/teal_200</item>
@@ -12,16 +12,15 @@
         <item name="android:paddingTop">0dp</item>
     </style>
 
+    <style name="TextAppearance.Centralizado" parent="TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:gravity">center</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+
     <style name="NavigationMenuStyle" parent="Widget.Design.NavigationView">
         <item name="android:textSize">18sp</item>
-
-        <!-- Cor do texto -->
         <item name="android:textColor">@color/black</item>
-
-        <!-- Altura dos itens -->
         <item name="android:minHeight">60dp</item>
-
-        <!-- Espaçamento interno -->
         <item name="android:padding">30dp</item>
     </style>
 </resources>

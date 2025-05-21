@@ -24,7 +24,8 @@
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/clinicaRecyclerView"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"
+            android:background="@drawable/gradient_background"/>
     </LinearLayout>
 
     <com.google.android.material.navigation.NavigationView
@@ -32,6 +33,7 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="start"
+        android:background="@drawable/gradient_background"
         app:menu="@menu/menu_nav"
         style="@style/NavigationMenuStyle"/>
 

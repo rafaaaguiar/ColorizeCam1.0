@@ -8,7 +8,10 @@
     android:textColor="@color/white"
     app:cardBackgroundColor="@color/bg_blue"
     app:cardElevation="6dp"
-    app:cardCornerRadius="12dp">
+    app:cardCornerRadius="12dp"
+    app:strokeWidth="1dp"
+    app:strokeColor="@color/white"
+    >
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
